@@ -22,3 +22,9 @@ Janusz 40
 running = false;
 break;
 
+Krzysztof 20
+Janusz 40
+Piotr 21
+
+for(Student student : s.getStudents()) {
+System.out.println(student.toString());

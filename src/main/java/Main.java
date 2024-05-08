@@ -19,19 +19,18 @@ public class Main {
             while (running) {
                 System.out.println("Wybierz:\n1. Dodaj studenta\n2. Wyświtl liste studentów\n3. wyjście");
                
-                    option = scanner.nextInt();
+                    int options = scanner.nextInt();
 
-            switch(option) {
+            switch(options) {
                 case 1:
-                    System.out.println("Podaj imię i nazwisko studenta:");
+                    System.out.println("Podaj imię studenta:");
                     String name = scanner.next();
                     System.out.println("Podaj wiek studenta:");
                     int age = scanner.nextInt();
                     s.addStudent(new Student(name, age));
                     break;
                 case 2:
-                    for(Student student : s.getStudents()) {
-                        System.out.println(student.toString());
+                    
                     }
                     break;
                 case 3:
