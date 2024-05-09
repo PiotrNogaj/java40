@@ -6,8 +6,7 @@ public class Main {
         try {
             Scanner scanner = new Scanner(System.in);
             Service s = new Service();
-            s.addStudent(new Student("Krzysztof", 20));
-            s.addStudent(new Student("Janusz", 40));
+            
 
             var students = s.getStudents();
             for(Student current : students) {
@@ -24,12 +23,14 @@ public class Main {
                 case 1:
                     System.out.println("Podaj imię studenta:");
                     String name = scanner.next();
+                    System.out.println("Podaj nazwisko studenta:");
+                    String lastname = scanner.next();
                     System.out.println("Podaj wiek studenta:");
                     int age = scanner.nextInt();
-                    s.addStudent(new Student(name, age));
+                    s.addStudent(new Student(name, lastname, age));
                     break;
                 case 2:
-                    System.out.println("List of students:");
+                    System.out.println("Lista studentów:");
                     for(Student student : s.getStudents()) {
                          System.out.println(student.toString());
                     }
