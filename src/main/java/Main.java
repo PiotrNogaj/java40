@@ -11,7 +11,6 @@ public class Main {
 
             var students = s.getStudents();
             for(Student current : students) {
-              
             }
 
             boolean running = true;
@@ -30,11 +29,14 @@ public class Main {
                     s.addStudent(new Student(name, age));
                     break;
                 case 2:
-                    
+                    System.out.println("List of students:");
+                    for(Student student : s.getStudents()) {
+                         System.out.println(student.toString());
                     }
                     break;
                 case 3:
-                    
+                    running = false;    
+                    break;
                 default:
                     System.out.println("Niepoprawny wybór, spróbuj ponownie.");
                     break;

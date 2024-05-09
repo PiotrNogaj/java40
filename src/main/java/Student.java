@@ -11,7 +11,7 @@ public class Student {
   public String GetName() {return Name;}
   public int GetAge() {return Age;}
 
-  public String ToString() {
+  public String toString() {
     return Name + " " + Integer.toString(Age);
   }
 
