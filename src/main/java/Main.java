@@ -36,7 +36,7 @@ public class Main {
                         scanner.next(); // czyszczenie błędnego wejścia
                         continue;
                     }
-                    System.out.println("Podaj datę urodzenia studenta:");
+                    System.out.println("Podaj datę urodzenia studenta [format xx.xx.xxxx]:");
                     String date = scanner.next();
                     try {
                         s.addStudent(new Student(name, lastname, age, date));
