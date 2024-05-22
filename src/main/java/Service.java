@@ -33,17 +33,18 @@ public class Service {
         return ret;
     }
 
-    public Student findStudentByName(String name) {
-        try {
-            for (Student student : getStudents()) {
-                if (student.GetName().equalsIgnoreCase(name)) {
-                    return student;
-                }
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-            System.out.println("Wystąpił błąd przy pobieraniu listy studentów.");
-        }
-        return null;
-    }
+      public Student findStudentByLastName(String lastname) {
+          try {
+              for (Student student : getStudents()) {
+                  if (student.GetLastname().equalsIgnoreCase(lastname)) {
+                      return student;
+                  }
+              }
+          } catch (IOException e) {
+              e.printStackTrace();
+              System.out.println("Wystąpił błąd przy pobieraniu listy studentów.");
+          }
+          return null;
+      }
+    
 }

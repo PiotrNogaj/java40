@@ -10,7 +10,7 @@ public class Main {
         boolean running = true;
 
         while (running) {
-            System.out.println("Wybierz:\n1. Dodaj studenta\n2. Wyświetl listę studentów\n3. Wyjście");
+            System.out.println("Wybierz:\n1. Dodaj studenta\n2. Wyświetl listę studentów\n3. Wyszukaj studenta po nazwisku\n4. Wyjście");
 
             int options = 0;
             try {
@@ -57,6 +57,17 @@ public class Main {
                     }
                     break;
                 case 3:
+                    System.out.println("Podaj nazwisko studenta:");
+                    String lastnameToSearch = scanner.next();
+                    Student studentByLastname = s.findStudentByLastName(lastnameToSearch);
+                    if (studentByLastname != null) {
+                        System.out.println("Znaleziono studenta:");
+                        System.out.println(studentByLastname);
+                    } else {
+                        System.out.println("Nie znaleziono studenta o podanym nazwisku.");
+                    }
+                    break;
+                case 4:
                     running = false;
                     break;
                 default:
